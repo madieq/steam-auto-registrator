@@ -1,0 +1,64 @@
+*
+    padding 0
+    margin 0
+    border 0
+    outline 0
+    -webkit-user-select none
+    -webkit-app-region no-drag
+    box-sizing border-box
+    &::selection
+        background #555
+
+bgMainColor = #353d45
+bgInputColor = #2c303c
+textInputColor = #b3bfc9
+bgButtonColor = #fff
+inputBaseSize = 60px
+buttonBaseSize = 60px
+buttonTextColor = #515b65
+
+body
+    background-color bgMainColor
+    overflow hidden
+    
+p,h1,h2,h3
+    color #fff
+p
+    font-size 20px
+
+input
+    font-size inputBaseSize /4
+    height inputBaseSize
+    width inputBaseSize * 4
+    padding 0 ((inputBaseSize / 4 )*1.5)
+
+    background bgInputColor
+    color textInputColor
+
+    &::placeholder
+        color darken(textInputColor,10%)
+    &:hover,&:focus
+        background lighten(bgInputColor,10%)
+
+button
+    height buttonBaseSize
+    min-width buttonBaseSize
+    padding 0 (buttonBaseSize /4)
+    text-transform uppercase
+    // font-weight bold
+    font-size buttonBaseSize / 4
+    background bgButtonColor
+    color buttonTextColor
+    
+    &:hover
+        cursor pointer
+    &:active
+        background darken(bgButtonColor,10%)
+
+// h1
+//     background-color #555
+//     text-shadow 0px 2px 3px rgba(#fff,0.5)
+//     color transperent 
+//     -webkit-background-clip text
+//     -moz-background-clip text
+//     background-clip text
